@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'SMOKER',
             img: 'images/smoker.PNG'
-        }
+        },
         {
             name: 'SMOKER',
             img: 'images/smoker.PNG'
