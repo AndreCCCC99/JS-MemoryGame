@@ -3,41 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardArray = [
         {
-            name: 'BEL',
-            img: 'images/Bel.PNG'
+            name: 'CHUCKY',
+            img: 'images/Chucky.PNG'
         },
         {
             name: 'CHUCKY',
             img: 'images/Chucky.PNG'
         },
         {
-            name: 'CLOWN',
-            img: 'images/clown.PNG'
+            name: 'COURTNEY',
+            img: 'images/Courtney.PNG'
         },
         {
             name: 'COURTNEY',
             img: 'images/Courtney.PNG'
         },
         {
-            name: 'ELLIOT',
-            img: 'images/Elliot.PNG'
+            name: 'NEO',
+            img: 'images/Neo.PNG'
         },
         {
             name: 'NEO',
             img: 'images/Neo.PNG'
         },
         {
-            name: 'NORRIS',
-            img: 'images/Norris.PNG'
-        },
+            name: 'SMOKER',
+            img: 'images/smoker.PNG'
+        }
         {
             name: 'SMOKER',
             img: 'images/smoker.PNG'
-        },
+        }
 
     ]
 
+
+    cardArray.sort(() => 0.5 - Math.random())
+
     const grid = document.querySelector('.grid')
+    const resultDisplay = document.querySelector('#result')
     var cardsChosen = []
     var cardsChosenId = []
     var cardsWon = [] 
@@ -73,7 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cardsChosen = []
         cardsChosenId = []
-
+        resultDisplay.textContent = cardsWon.length
+        if(cardsWon.length === cardsArray.length/2) {
+            resultDisplay.textContent = 'You WON!'
+        }
     }
 
 
@@ -86,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosenId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if(cardsChosen.length === 2){
-            setTimeout(checkForMatch,500)
+            setTimeout(checkForMatch,200)
         }
     }
 
