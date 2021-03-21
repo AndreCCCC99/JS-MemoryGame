@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var card = document.createElement('img')
             card.setAttribute('src', 'images/pattern.jpg')
             card.setAttribute('data-id', i)
-            //card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipcard)
             grid.appendChild(card)
         }
     }
@@ -68,7 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }else{
             cards[optionOne].setAttribute('src','images/pattern.jpg' )
             cards[optionTwo].setAttribute('src','images/pattern.jpg' )
+            alert('No Match');
         }
+
+        cardsChosen = []
+        cardsChosenId = []
+
     }
 
 
@@ -84,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(checkForMatch,500)
         }
     }
-
-
-
 
     createBoard();
 

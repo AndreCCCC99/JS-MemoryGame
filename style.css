@@ -2,5 +2,11 @@
     flex-wrap: wrap;
     display: flex;
     height: 200px;
-    width: 400px;
+    width: 500px;
+
+}
+
+
+img {
+    border: solid black 1px;
 }
